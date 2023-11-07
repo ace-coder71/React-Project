@@ -5,8 +5,11 @@ function App() {
   const [counter, setCounter] = useState(0);
   // let count = 0;
   const addValue = () => {
+    if(counter<20) setCounter(counter+1);  
     console.log("Clicked", counter);
-    if(counter<20) setCounter(counter+1);    
+    if(counter<20) setCounter(prevCounter => prevCounter+1);  
+    if(counter<20) setCounter(prevCounter => prevCounter+1);  
+    if(counter<20) setCounter(prevCounter => prevCounter+1);  
   };
 
   const rmvValue = () => {
